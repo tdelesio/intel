@@ -7,7 +7,7 @@ spring:
       hibernate:
         dialect: org.hibernate.dialect.MySQL5Dialect
   datasource:
-    url: jdbc:mysql://10.0.0.115/intel
+    url: jdbc:mysql://localhost/intel
     username: dbuser
     password: password
     driver-class-name: com.mysql.jdbc.Driver
