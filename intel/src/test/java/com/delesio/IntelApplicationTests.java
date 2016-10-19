@@ -17,8 +17,8 @@ import com.delesio.data.ProductSeriesRespository;
 import com.delesio.model.CodeName;
 import com.delesio.service.IntelService;
 
-@RunWith(SpringRunner.class)
-@SpringBootTest
+//@RunWith(SpringRunner.class)
+//@SpringBootTest
 public class IntelApplicationTests {
 	
 	@Autowired
@@ -39,48 +39,48 @@ public class IntelApplicationTests {
 	@Autowired
 	private ProductFamilyRespository productFamilyRespository;
 
-	@Test
-	public void contextLoads() {
-	}
+//	@Test
+//	public void contextLoads() {
+//	}
 	
-	@Test
-	public void testCodeNames()
-	{
-		service.loadCodeNames();
-		
-		Assert.assertTrue(codeNameRepository.count()>0);
-	}
-	
-	@Test
-	public void testProcessor()
-	{
-		service.loadProcessors();
-		
-		Assert.assertTrue(processorRespority.count()>0);
-	}
-	
-	@Test
-	public void testProcessBrand()
-	{
-		service.loadProcessBrands();
-		
-		Assert.assertTrue(processorBrandRepository.count()>0);
-	}
-	
-	@Test
-	public void testProductFamily()
-	{
-		service.loadProductFaimly();
-		
-		Assert.assertTrue(productFamilyRespository.count()>0);
-	}
-	
-	@Test
-	public void testProductSeries()
-	{
-		service.loadProductSeries();
-		
-		Assert.assertTrue(productSeriesRespository.count()>0);
-	}
+//	@Test
+//	public void testCodeNames()
+//	{
+//		service.loadCodeNames();
+//		
+//		Assert.assertTrue(codeNameRepository.count()>0);
+//	}
+//	
+//	@Test
+//	public void testProcessor()
+//	{
+//		service.loadProcessors();
+//		
+//		Assert.assertTrue(processorRespority.count()>0);
+//	}
+//	
+//	@Test
+//	public void testProcessBrand()
+//	{
+//		service.loadProcessBrands();
+//		
+//		Assert.assertTrue(processorBrandRepository.count()>0);
+//	}
+//	
+//	@Test
+//	public void testProductFamily()
+//	{
+//		service.loadProductFaimly();
+//		
+//		Assert.assertTrue(productFamilyRespository.count()>0);
+//	}
+//	
+//	@Test
+//	public void testProductSeries()
+//	{
+//		service.loadProductSeries();
+//		
+//		Assert.assertTrue(productSeriesRespository.count()>0);
+//	}
 
 }

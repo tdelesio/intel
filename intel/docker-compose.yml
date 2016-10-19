@@ -1,7 +1,14 @@
 version: "2"
 
 services:
-  
+  maven:
+    image: maven
+    volumes: 
+      - $PWD:/usr/src/mvnhome
+    working_dir: /usr/src/mvnhome
+    command: mvn clean install
+#    depends_on: 
+#      - intel-db
   intel-db:  
     image: mysql:latest
     environment:
@@ -9,10 +16,29 @@ services:
       - MYSQL_USER=dbuser
       - MYSQL_PASSWORD=password
       - MYSQL_DATABASE=intel
-#    volumes:
-#      - mysql-data:/home.scripts  
-#    working_dir: "/home/scripts"
     ports:
       - "3306:3306"
     expose:
       - "3306"
+#    networks:
+#      - intel-network
+#  intel-app:
+#    image: openjdk:8
+#    volumes:
+#     - ./target:/usr/src/javahome
+#    working_dir: /usr/src/javahome
+#    command: java -jar intel-1.jar
+#    networks:
+#     - intel-network
+#    depends_on:
+#     - intel-db
+#     - maven
+      
+
+volumes:
+  maven:
+    driver: local    
+    
+#networks:
+#  intel-network:
+#    driver: bridge
