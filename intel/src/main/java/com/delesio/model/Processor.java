@@ -1,7 +1,14 @@
 package com.delesio.model;
 
-public class Processor {
+import java.io.Serializable;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
+public class Processor implements Serializable{
+
+	@Id
 	private Integer ProductId;
 	private Integer ProductFamilyId;
 	private Integer ProductSeriesId;

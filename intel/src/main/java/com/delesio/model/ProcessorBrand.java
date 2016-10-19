@@ -1,9 +1,22 @@
 package com.delesio.model;
 
-public class ProcessorBrand {
+import java.io.Serializable;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+@Entity
+public class ProcessorBrand implements Serializable{
+
+	@Id
+	@JsonProperty("BrandId")
 	private Integer BrandId;
+	
+	@JsonProperty("BrandName")
 	private String BrandName;
+	
 	public Integer getBrandId() {
 		return BrandId;
 	}
