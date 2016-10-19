@@ -51,13 +51,13 @@ public class IntelApplicationTests {
 		Assert.assertTrue(codeNameRepository.count()>0);
 	}
 	
-//	@Test
-//	public void testProcessor()
-//	{
-//		service.loadProcessors();
-//		
-//		Assert.assertTrue(processorRespority.count()>0);
-//	}
+	@Test
+	public void testProcessor()
+	{
+		service.loadProcessors();
+		
+		Assert.assertTrue(processorRespority.count()>0);
+	}
 	
 	@Test
 	public void testProcessBrand()

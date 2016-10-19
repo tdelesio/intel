@@ -5,12 +5,18 @@ import java.io.Serializable;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 @Entity
 public class Processor implements Serializable{
 
 	@Id
+	@JsonProperty("ProductId")
 	private Integer ProductId;
+	
+	@JsonProperty("ProductFamilyId")
 	private Integer ProductFamilyId;
+	
 	private Integer ProductSeriesId;
 	private Integer CodeNameEPMId;
 	private Integer ProcessorBrandId;
