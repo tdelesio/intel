@@ -1,0 +1,18 @@
+version: "2"
+
+services:
+  
+  intel-db:  
+    image: mysql:latest
+    environment:
+      - MYSQL_ROOT_PASSWORD=admin123
+      - MYSQL_USER=dbuser
+      - MYSQL_PASSWORD=password
+      - MYSQL_DATABASE=intel
+#    volumes:
+#      - mysql-data:/home.scripts  
+#    working_dir: "/home/scripts"
+    ports:
+      - "3306:3306"
+    expose:
+      - "3306"
