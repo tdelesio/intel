@@ -17,148 +17,431 @@ public class Processor implements Serializable{
 	@JsonProperty("ProductFamilyId")
 	private Integer ProductFamilyId;
 	
+	@JsonProperty("ProductSeriesId")
 	private Integer ProductSeriesId;
+
+	@JsonProperty("CodeNameEPMId")
 	private Integer CodeNameEPMId;
+
+	@JsonProperty("ProcessorBreandId")
 	private Integer ProcessorBrandId;
+
+	@JsonProperty("Embedded")
 	private Boolean Embedded;
+
+	@JsonProperty("Lithography")
 	private String Lithography;
+
+	@JsonProperty("PackageSize")
 	private String PackageSize;
+
+	@JsonProperty("MaxTDP")
 	private Double MaxTDP;
+
+	@JsonProperty("TCase")
 	private String TCase;
+
+	@JsonProperty("DatasheetUrl")
 	private String DatasheetUrl;
+
+	@JsonProperty("ProcessorNumber")
 	private String ProcessorNumber;
+
+	@JsonProperty("CoreCount")
 	private Integer CoreCount;
+
+	@JsonProperty("SpeedstepTechnology")
 	private Boolean SpeedstepTechnology;
+
+	@JsonProperty("ExecuteDisable")
 	private Boolean ExecuteDisable;
+
+	@JsonProperty("HaltState")
 	private Boolean HaltState;
+
+	@JsonProperty("EM64")
 	private Boolean EM64;
+
+	@JsonProperty("TXT")
 	private Boolean TXT;
+
+	@JsonProperty("VTX")
 	private String VTX;
+
+	@JsonProperty("HyperThreading")
 	private Boolean HyperThreading;
+
+	@JsonProperty("DemandBasedSwitching")
 	private Boolean DemandBasedSwitching;
+
+	@JsonProperty("CoreVoltage")
 	private String CoreVoltage;
+
+	@JsonProperty("FSBParity")
 	private Boolean FSBParity;
+
+	@JsonProperty("MemoryTypes")
 	private String MemoryTypes;
+
+	@JsonProperty("ECCMemory")
 	private Boolean ECCMemory;
+
+	@JsonProperty("NumMemoryChannels")
 	private Integer NumMemoryChannels;
+
+	@JsonProperty("MaxMemoryBandwidth")
 	private Double MaxMemoryBandwidth;
+
+	@JsonProperty("MaxCPUs")
 	private Integer MaxCPUs;
+
+	@JsonProperty("IntegratedGraphics")
 	private Boolean IntegratedGraphics;
+
+	@JsonProperty("DualDisplay")
 	private Boolean DualDisplay;
+
+	@JsonProperty("GraphicsOutput")
 	private String GraphicsOutput;
+
+	@JsonProperty("FlexMemoryTechnology")
 	private Boolean FlexMemoryTechnology;
+
+	@JsonProperty("FastMemoryTechnology")
 	private Boolean FastMemoryTechnology;
+
+	@JsonProperty("NumPCIExpressPorts")
 	private Integer NumPCIExpressPorts;
+
+        @JsonProperty("VTD")
 	private Boolean VTD;
+
+        @JsonProperty("CacheKB")
 	private Double CacheKB;
+
+        @JsonProperty("ClockSpeedMhz")
 	private Double ClockSpeedMhz;
+
+        @JsonProperty("TransistorCount")
 	private Float TransistorCount;
+
+        @JsonProperty("DieSize")
 	private String DieSize;
+
+        @JsonProperty("ThermalJunctionRateCode")
 	private String ThermalJunctionRateCode;
+
+        @JsonProperty("ThermalMonitoring2Indicator")
 	private Boolean ThermalMonitoring2Indicator;
+
+        @JsonProperty("TBT")
 	private Boolean TBT;
+
+        @JsonProperty("PhysicalAddressExtension")
 	private String PhysicalAddressExtension;
+
+        @JsonProperty("InustructionSet")
 	private String InstructionSet;
+
+        @JsonProperty("InstructionSetExtensions")
 	private String InstructionSetExtensions;
+
+        @JsonProperty("BusType")
 	private String BusType;
+
+        @JsonProperty("BusBandwidth")
 	private Double BusBandwidth;
+
+        @JsonProperty("BusTypeUnits")
 	private String BusTypeUnits;
+
+        @JsonProperty("BusNumPorts")
 	private Integer BusNumPorts;
+
+        @JsonProperty("MaxMemMB")
 	private Integer MaxMemMB;
+
+        @JsonProperty("PCIExpressRevision")
 	private String PCIExpressRevision;
+
+        @JsonProperty("PCIExpressConfigs")
 	private String PCIExpressConfigs;
+
+        @JsonProperty("AESTech")
 	private Boolean AESTech;
+
+        @JsonProperty("CacheType")
 	private String CacheType;
+
+        @JsonProperty("BusCoreRatio")
 	private String BusCoreRatio;
+
+        @JsonProperty("ClockSpeedMaxMhz")
 	private Double ClockSpeedMaxMhz;
+
+        @JsonProperty("CVTMID")
 	private Boolean CVTMID;
+
+        @JsonProperty("CVTHD")
 	private Boolean CVTHD;
+
+        @JsonProperty("FDI")
 	private Boolean FDI;
+
+        @JsonProperty("GraphicsMaxMemMB")
 	private Integer GraphicsMaxMemMB;
+
+        @JsonProperty("GraphicsFreqMHz")
 	private Double GraphicsFreqMHz;
+
+        @JsonProperty("GraphicsMaxFreqMHz")
 	private Double GraphicsMaxFreqMHz;
+
+        @JsonProperty("GIMCLithography")
 	private String GIMCLithography;
+
+        @JsonProperty("GIMCTransistorCount")
 	private Float GIMCTransistorCount;
+
+        @JsonProperty("GIMCDieSize")
 	private String GIMCDieSize;
+
+        @JsonProperty("Cache")
 	private String Cache;
+
+        @JsonProperty("ClockSpeed")
 	private String ClockSpeed;
+
+        @JsonProperty("ClockSpeedMax")
 	private String ClockSpeedMax;
+
+        @JsonProperty("ThreadCount")
 	private Integer ThreadCount;
+
+        @JsonProperty("MaxMem")
 	private String MaxMem;
+
+        @JsonProperty("GraphicsMaxMem")
 	private String GraphicsMaxMem;
+
+        @JsonProperty("GraphicsFreq")
 	private String GraphicsFreq;
+
+        @JsonProperty("GraphicsMaxFreq")
 	private String GraphicsMaxFreq;
+
+        @JsonProperty("BrandBadge")
 	private String BrandBadge;
+
+        @JsonProperty("ProcessorBrandName")
 	private String ProcessorBrandName;
+
+        @JsonProperty("Status")
 	private Integer Status;
+
+        @JsonProperty("ProductType")
 	private Integer ProductType;
+
+        @JsonProperty("MarketSegment")
 	private String MarketSegment;
+
+        @JsonProperty("BornOnDate")
 	private String BornOnDate;
+
+        @JsonProperty("ProductName")
 	private String ProductName;
+
+        @JsonProperty("TBTVersion")
 	private String TBTVersion;
+
+        @JsonProperty("QuickSyncVideo")
 	private Boolean QuickSyncVideo;
+
+        @JsonProperty("WiDi")
 	private Boolean WiDi;
+
+        @JsonProperty("AdvancedVectorExtensions")
 	private Boolean AdvancedVectorExtensions;
+
+        @JsonProperty("InTru3D")
 	private Boolean InTru3D;
+
+        @JsonProperty("MyWiFiTech")
 	private Boolean MyWiFiTech;
+
+        @JsonProperty("ScalableSockets")
 	private String ScalableSockets;
+
 //	private DateTime LaunchDate;
+
+        @JsonProperty("Link")
 	private String Link;
+
+        @JsonProperty("IntelInsider")
 	private Boolean IntelInsider;
+
+        @JsonProperty("ProcessorGraphics")
 	private Boolean ProcessorGraphics;
+
+        @JsonProperty("GraphicsModel")
 	private String GraphicsModel;
+
+        @JsonProperty("LastChange")
 	private Integer LastChange;
+
+        @JsonProperty("VProTechnology")
 	private Boolean VProTechnology;
+
+        @JsonProperty("ExtendedPageTables")
 	private Boolean ExtendedPageTables;
+
+        @JsonProperty("NumDisplaysSupported")
 	private Integer NumDisplaysSupported;
+
+        @JsonProperty("SocketsSupported")
 	private String SocketsSupported;
+
+        @JsonProperty("ScenarioDesignPower")
 	private Double ScenarioDesignPower;
+
+        @JsonProperty("SecureKeyTechVersion")
 	private Float SecureKeyTechVersion;
+
+        @JsonProperty("IdentityProtectionTechVersion")
 	private Float IdentityProtectionTechVersion;
+
+        @JsonProperty("InstructionReplayTechVersion")
 	private Float InstructionReplayTechVersion;
+
+        @JsonProperty("TransactionalSynchronizationExtensionVersion")
 	private Float TransactionalSynchronizationExtensionVersion;
+
+        @JsonProperty("ThermalSolutionSpecification")
 	private String ThermalSolutionSpecification;
+
+        @JsonProperty("SmartConnectVersion")
 	private Float SmartConnectVersion;
+
+        @JsonProperty("RapidStorageTech")
 	private Boolean RapidStorageTech;
+
+        @JsonProperty("SATA6PortCount")
 	private Integer SATA6PortCount;
+
+        @JsonProperty("GraphicsCoreCount")
 	private Integer GraphicsCoreCount;
+
+        @JsonProperty("GraphicsVideoDecode")
 	private String GraphicsVideoDecode;
+
+        @JsonProperty("SmartIdleTechVersion")
 	private Float SmartIdleTechVersion;
+
+        @JsonProperty("Antenna")
 	private String Antenna;
+
+        @JsonProperty("BurstFrequencyMhz")
 	private Double BurstFrequencyMhz;
+
+        @JsonProperty("GraphicsBurstFrequencyMhz")
 	private Double GraphicsBurstFrequencyMhz;
+
+        @JsonProperty("AntiTheftTechnology")
 	private Boolean AntiTheftTechnology;
+
+        @JsonProperty("SmartResponseTechVersion")
 	private Float SmartResponseTechVersion;
+
+        @JsonProperty("SmallBusinessAdvantageTechVersion")
 	private Float SmallBusinessAdvantageTechVersion;
+
+        @JsonProperty("StableImagePlatformProgramVersion")
 	private Float StableImagePlatformProgramVersion;
+
+        @JsonProperty("GraphicsBurstFrequency")
 	private String GraphicsBurstFrequency;
+
+        @JsonProperty("BurstFrequency")
 	private String BurstFrequency;
+
+        @JsonProperty("SecureBootTechVersion")
 	private Float SecureBootTechVersion;
+
+        @JsonProperty("DrcConflictFree")
 	private Boolean DrcConflictFree;
+
+        @JsonProperty("ClearVideoTechnology")
 	private Boolean ClearVideoTechnology;
+
+        @JsonProperty("ConfigTDPMax")
 	private Double ConfigTDPMax;
+
+        @JsonProperty("ConfigTDPMaxFrequencyMhz")
 	private Double ConfigTDPMaxFrequencyMhz;
+
+        @JsonProperty("ConfigTDPMaxFrequency")
 	private String ConfigTDPMaxFrequency;
+
+        @JsonProperty("ConfigTDPMin")
 	private Double ConfigTDPMin;
+
+        @JsonProperty("ConfigTDPMinFrequencyMhz")
 	private Double ConfigTDPMinFrequencyMhz;
+
+        @JsonProperty("ConfigTDPMinFrequency")
 	private String ConfigTDPMinFrequency;
+
+        @JsonProperty("GraphicsExecutionUnits")
 	private Integer GraphicsExecutionUnits;
+
+        @JsonProperty("GraphicsMaxResolutionHDMI")
 	private String GraphicsMaxResolutionHDMI;
+
+        @JsonProperty("GraphicsMaxResolutionDP")
 	private String GraphicsMaxResolutionDP;
+
+        @JsonProperty("GraphicsMaxResolutionnIFP")
 	private String GraphicsMaxResolutionIFP;
+
+        @JsonProperty("GraphicsMaxResoluionVGA")
 	private String GraphicsMaxResoluionVGA;
+
+        @JsonProperty("GraphicsDirectXSupport")
 	private String GraphicsDirectXSupport;
+
+        @JsonProperty("GraphicsOpenGLSupport")
 	private String GraphicsOpenGLSupport;
+
+        @JsonProperty("GraphicsDeviceId")
 	private String GraphicsDeviceId;
+
+        @JsonProperty("BaseBandFunctions")
 	private String BasebandFunctions;
+
+        @JsonProperty("RadioFreqTransceiver")
 	private String RadioFreqTransceiver;
+
+        @JsonProperty("RadioFreqTransceiverFunctions")
 	private String RadioFreqTransceiverFunctions;
+
+        @JsonProperty("ProtocolStack")
 	private String ProtocolStack;
+
+        @JsonProperty("SoftwareGuardExtensions")
 	private Integer SoftwareGuardExtensions;
+
+        @JsonProperty("GraphicsMaxResolutionHDMI2")
 	private String GraphicsMaxResolutionHDMI2;
+
+        @JsonProperty("GraphicsMaxResolutionWiDi")
 	private String GraphicsMaxResolutionWiDi;
+
+        @JsonProperty("Graphics4KSupportLevel")
 	private String Graphics4KSupportLevel;
+
+        @JsonProperty("GraphicsMaxRefreshRateHz")
 	private Integer GraphicsMaxRefreshRateHz;
+
 	public Integer getProductId() {
 		return ProductId;
 	}
