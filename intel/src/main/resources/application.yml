@@ -5,9 +5,7 @@ spring:
       ddl-auto: create
     properties:
       hibernate:
-        dialect: org.hibernate.dialect.MySQL5Dialect
+        dialect: org.hibernate.dialect.SQLServer2012Dialect
   datasource:
-    url: jdbc:mysql://localhost/intel
-    username: dbuser
-    password: password
-    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:sqlserver://cpudb01.database.windows.net:1433;database=cpudb;user=tschwarz@cpudb01;password=Bugz8allthe^s;encrypt=true;trustServerCertificate=false;hostNameInCertificate=*.database.windows.net;loginTimeout=30;
+    driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver

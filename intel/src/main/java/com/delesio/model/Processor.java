@@ -25,7 +25,7 @@ public class Processor implements Serializable{
 	@JsonProperty("CodeNameEPMId")
 	private Integer CodeNameEPMId;
 
-	@JsonProperty("ProcessorBreandId")
+	@JsonProperty("ProcessorBrandId")
 	private Integer ProcessorBrandId;
 
 	@JsonProperty("Embedded")
