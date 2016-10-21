@@ -15,6 +15,8 @@ import com.delesio.data.ProcessorRespority;
 import com.delesio.data.ProductFamilyRespository;
 import com.delesio.data.ProductSeriesRespository;
 import com.delesio.model.CodeName;
+import com.delesio.model.Processor;
+import com.delesio.model.Processors;
 import com.delesio.service.IntelService;
 
 //@RunWith(SpringRunner.class)
@@ -54,8 +56,12 @@ public class IntelApplicationTests {
 //	@Test
 //	public void testProcessor()
 //	{
-//		service.loadProcessors();
-//		
+//		Processors processors = service.loadProcessors();
+//		List<Processor> list = processors.getD();
+//		for (Processor processor:list)
+//		{
+//			System.out.println(processor.getLaunchDateDisplay());
+//		}
 //		Assert.assertTrue(processorRespority.count()>0);
 //	}
 //	

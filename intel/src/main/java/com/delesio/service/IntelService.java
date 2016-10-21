@@ -15,6 +15,7 @@ import com.delesio.data.ProductFamilyRespository;
 import com.delesio.data.ProductSeriesRespository;
 import com.delesio.model.CodeName;
 import com.delesio.model.CodeNames;
+import com.delesio.model.Processor;
 import com.delesio.model.ProcessorBrands;
 import com.delesio.model.Processors;
 import com.delesio.model.ProductFamily;
@@ -49,13 +50,35 @@ public class IntelService {
 		RestTemplate restTemplate = new RestTemplate();
 		restTemplate.getMessageConverters().add(new StringHttpMessageConverter());
 		Processors processors = restTemplate.getForObject("http://odata.intel.com/API/v1_0/Products/Processors()?$format=json&&api_key=1CEAF259DAD4459AA915D4B26C97239B", Processors.class);
+		List<Processor> list = processors.getD();
+		for (Processor processor:list)
+		{
+			processor.setLaunchDateDisplay(convertJSONtoLong(processor.getLaunchDate()));
+			
+		}
 		
-		processorRespority.save(processors.getD());
+		processorRespority.save(list);
 		
 		return processors;
 		
 		
 	}
+	
+	public Long convertJSONtoLong(String input)
+	{
+		Long value;
+		if (input == null || input.length()<=5)
+			return new Long(0);
+//		System.out.println(LaunchDate);
+		String launchDateConversion = input.substring(6);
+//		System.out.println(launchDateConversion);
+		launchDateConversion = launchDateConversion.substring(0, launchDateConversion.length()-2);
+//		System.out.println(launchDateConversion);
+		value = new Long(launchDateConversion);
+//		System.err.println(launchDateDisplay);
+		return value;
+	}
+	
 	
 	public CodeNames loadCodeNames()
 	{

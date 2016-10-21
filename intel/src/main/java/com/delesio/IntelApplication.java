@@ -18,47 +18,47 @@ import org.springframework.context.annotation.Bean;
 import com.delesio.service.IntelService;
 
 @SpringBootApplication
-@EnableBatchProcessing
+//@EnableBatchProcessing
 public class IntelApplication {
 
-	@Autowired
-	private JobBuilderFactory jobs;
-
-	@Autowired
-	private StepBuilderFactory steps;
+//	@Autowired
+//	private JobBuilderFactory jobs;
+//
+//	@Autowired
+//	private StepBuilderFactory steps;
 
 	@Autowired
 	private IntelService service;
 	
-	@Bean
-	protected Tasklet tasklet() {
-
-		return new Tasklet() {
-			@Override
-			public RepeatStatus execute(StepContribution contribution,
-					ChunkContext context) {
-				
-				service.loadCodeNames();
-				service.loadProcessBrands();
-				service.loadProcessors();
-				service.loadProductFaimly();
-				service.loadProductSeries();
-				
-				return RepeatStatus.FINISHED;
-			}
-		};
-
-	}
-
-	@Bean
-	public Job job() throws Exception {
-		return this.jobs.get("job").start(step1()).build();
-	}
-
-	@Bean
-	protected Step step1() throws Exception {
-		return this.steps.get("step1").tasklet(tasklet()).build();
-	}
+//	@Bean
+//	protected Tasklet tasklet() {
+//
+//		return new Tasklet() {
+//			@Override
+//			public RepeatStatus execute(StepContribution contribution,
+//					ChunkContext context) {
+//				
+//				service.loadCodeNames();
+//				service.loadProcessBrands();
+//				service.loadProcessors();
+//				service.loadProductFaimly();
+//				service.loadProductSeries();
+//				
+//				return RepeatStatus.FINISHED;
+//			}
+//		};
+//
+//	}
+//
+//	@Bean
+//	public Job job() throws Exception {
+//		return this.jobs.get("job").start(step1()).build();
+//	}
+//
+//	@Bean
+//	protected Step step1() throws Exception {
+//		return this.steps.get("step1").tasklet(tasklet()).build();
+//	}
 	
 	public static void main(String[] args) {
 //		SpringApplication.run(IntelApplication.class, args);

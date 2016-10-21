@@ -2,8 +2,10 @@ package com.delesio.model;
 
 import java.io.Serializable;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.Transient;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
@@ -272,7 +274,10 @@ public class Processor implements Serializable{
         @JsonProperty("ScalableSockets")
 	private String ScalableSockets;
 
-//	private DateTime LaunchDate;
+    @JsonProperty("LaunchDate")
+    private String LaunchDate;
+    
+    private Long launchDateDisplay;
 
         @JsonProperty("Link")
 	private String Link;
@@ -441,6 +446,9 @@ public class Processor implements Serializable{
 
         @JsonProperty("GraphicsMaxRefreshRateHz")
 	private Integer GraphicsMaxRefreshRateHz;
+    
+        
+    //private Long launchDateDisplay;
 
 	public Integer getProductId() {
 		return ProductId;
@@ -1300,7 +1308,20 @@ public class Processor implements Serializable{
 	public void setGraphicsMaxRefreshRateHz(Integer graphicsMaxRefreshRateHz) {
 		GraphicsMaxRefreshRateHz = graphicsMaxRefreshRateHz;
 	}
+	public String getLaunchDate() {
+		return LaunchDate;
+	}
+	public void setLaunchDate(String launchDate) {
+		LaunchDate = launchDate;
+	}
+	public Long getLaunchDateDisplay() {
+		return launchDateDisplay;
+	}
+	public void setLaunchDateDisplay(Long launchDateDisplay) {
+		this.launchDateDisplay = launchDateDisplay;
+	}
 	
+
 	
 
 }
